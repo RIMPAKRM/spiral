@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>спирдель</title>
+    <style>
+    body {
+        margin: 0;
+        background: #000;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .p {
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, #fff 10%, transparent 11%) center/20px 20px;
+        border-radius: 50%;
+        animation: spinIn 4s infinite linear;
+    }
+
+    @keyframes spinIn {
+      0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: rotate(180deg) scale(0.5);
+        opacity: 0.7;
+      }
+      100% {
+        transform: rotate(360deg) scale(0.1);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="p"></div>
+</body>
+</html>
